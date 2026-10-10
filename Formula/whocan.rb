@@ -18,6 +18,6 @@ class Whocan < Formula
 
     output = shell_output("#{bin}/whocan --json")
     assert_match "\"key\" : \"accessibility\"", output
-    refute_match "\e[", shell_output("#{bin}/whocan")
+    refute_match "\e[", shell_output(bin/"whocan")
   end
 end
